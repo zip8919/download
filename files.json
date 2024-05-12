@@ -1,22 +1,16 @@
 {
   "files": [
     {
-      "name": "index.html",
-      "size": "1.26 KB",
-      "downloadUrl": "/index.html",
+      "name": "mcwzh-meme-resourcepack.zip",
+      "size": "4957.06 KB",
+      "downloadUrl": "/mcwzh-meme-resourcepack.zip",
       "isDirectory": false
     },
     {
-      "name": "test.txt",
-      "size": "0.00 KB",
-      "downloadUrl": "/test.txt",
+      "name": "Slimefun-ResourcePack.zip",
+      "size": "1136.37 KB",
+      "downloadUrl": "/Slimefun-ResourcePack.zip",
       "isDirectory": false
-    },
-    {
-      "name": "test2",
-      "size": "Folder",
-      "downloadUrl": "/test2",
-      "isDirectory": true
     }
   ]
 }
