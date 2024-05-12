@@ -9,7 +9,9 @@
   <h2>Index of All</h2>
   <div id="downloads-container"></div>
 
-  <script>
+  <!-- 使用async属性，这样可以在fetch完成后执行回调函数 -->
+  <script async>
+    // 修改fetch请求，添加检查isDirectory的逻辑
     fetch('/files.json')
       .then(response => response.json())
       .then(data => {
@@ -17,12 +19,17 @@
         const downloadsContainer = document.getElementById('downloads-container');
 
         filesList.forEach(file => {
-          const button = document.createElement('a');
-          button.href = file.downloadUrl;
-          button.textContent = file.name;
-          button.download = file.name;
-          downloadsContainer.appendChild(button);
-          downloadsContainer.appendChild(document.createElement('br'));
+          if (file.isDirectory) {
+            // 如果isDirectory为true，打开页面而不是下载
+            window.location.href = file.url; // 假设url字段包含文件的URL
+          } else {
+            const button = document.createElement('a');
+            button.href = file.downloadUrl;
+            button.textContent = file.name;
+            button.download = file.name;
+            downloadsContainer.appendChild(button);
+            downloadsContainer.appendChild(document.createElement('br'));
+          }
         });
       })
       .catch(error => console.error('Error fetching files:', error));
