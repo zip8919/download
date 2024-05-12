@@ -1,16 +1,16 @@
 {
   "files": [
     {
-      "name": "index.html",
-      "size": "0.86 KB",
-      "downloadUrl": "/index.html",
-      "isDirectory": false
-    },
-    {
       "name": "test.txt",
       "size": "0.00 KB",
       "downloadUrl": "/test.txt",
       "isDirectory": false
+    },
+    {
+      "name": "test2",
+      "size": "Folder",
+      "downloadUrl": "/test2",
+      "isDirectory": true
     }
   ]
 }
